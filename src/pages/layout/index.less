@@ -1,0 +1,108 @@
+@left-width: 210px; //框架左侧的宽度
+@top-height: 40px; //顶部条的高度
+
+#sider {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    width: @left-width;
+    background: #1f2d3d;
+    box-shadow: 5px 0 10px 1px rgba(200, 200, 200, 0.5);
+
+    #logo {
+        height: @top-height;
+        color: #333;
+        background: #e9eef1;
+        border-bottom: solid 1px #475669;
+        font-size: 14px;
+        box-shadow: 0 5px 10px 1px rgba(200, 200, 200, 0.5);
+        line-height: @top-height;
+        align-items: center;
+        display: flex;
+
+        img {
+            float: left;
+            height: 80%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    #menus {
+        position: relative;
+
+        .menu_bg {
+            margin: 0;
+            background: #324057;
+            list-style: none;
+            padding: 0;
+        }
+        .menu_item {
+            color: #abb1b7;
+            height: 56px;
+            line-height: 56px;
+            cursor: pointer;
+            font-size: 13px;
+            padding: 0 20px;
+            border-bottom: solid 1px #333;
+
+            &:hover {
+                background: #475669;
+                box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.5);
+            }
+            &.active {
+                color: #fff;
+            }
+            i {
+                font-size: 1.5em;
+                margin-right: 10px;
+            }
+        }
+    }
+    .footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        width: @left-width;
+        padding: 10px;
+        text-align: center;
+
+        a {
+            color: #999;
+            font-size: 10px;
+        }
+    }
+}
+#main {
+    margin-left: @left-width;
+    position: relative;
+
+    .top_menus {
+        position: fixed;
+        top: 0;
+        left: @left-width;
+        right: 0;
+        border-bottom: solid 1px #eff2f7;
+        padding: 10px;
+        height: @top-height;
+        box-sizing: border-box;
+        font-size: 12px;
+        background: white;
+        z-index: 1;
+        box-shadow: 0 5px 10px 1px rgba(200, 200, 200, 0.5);
+        text-align: right;
+
+        .el-dropdown {
+            cursor: pointer;
+            font-size: 12px;
+        }
+    }
+    .height40 {
+        height: 40px;
+    }
+    .continer {
+        // margin-top: 40px;
+        padding: 20px;
+    }
+}

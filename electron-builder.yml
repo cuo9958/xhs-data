@@ -1,0 +1,40 @@
+appId: "com.example.react-electron"
+copyright: "GFC"
+productName: "re-demo"
+
+asar: "true"
+
+directories:
+  output: "release"
+
+files:
+  - "assets/"
+  - "package.json"
+  - "build/"
+  - "native/index.js"
+  - "native/preload.js"
+
+win:
+  icon: "assets/app-icon/win/icon.ico"
+  target:
+    - target: "nsis"
+      arch:
+        - "x64"
+    - target: "portable"
+
+linux:
+  icon: "assets/app-icon/png/512x512.png"
+  category: "Utility"
+  target:
+    - "AppImage"
+    - "deb"
+    - "rpm"
+
+mac:
+  category: "public.app-category.productivity"
+  icon: "assets/app-icon/mac/icon.icns"
+  gatekeeperAssess: false
+  hardenedRuntime: true
+  target:
+    - "zip"
+    - "dmg"
